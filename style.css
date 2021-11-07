@@ -574,6 +574,28 @@ nav{
     }
     .info{
         zoom: 0.9;
-    padding-bottom: 17px;
+        padding-bottom: 17px;
+    }
+    .sixth-icon-parent>div{
+        margin: 0px 30px;
+    }
+    .ffth-hid{
+        display: none;
+    }
+    .ffth-nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        top: 230px;
+        z-index: 1;
+    }
+    .ffth-angle{
+        padding: 8px 23px ;
+        border-radius: 50%;
+        background: rgb(0 0 0 / 29%);
+        color: rgb(21 21 20);
+        font-size: 2rem;
+        cursor: pointer;
     }
 }

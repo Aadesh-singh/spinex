@@ -14,7 +14,6 @@ function load(){
     naam.innerHTML = names[num];
     img.src = images[num];
     svg.src = svgs[num];
-    console.log(num);
 }
 load(0);
 
@@ -99,7 +98,6 @@ function sixthIcon(k){
     temp.innerHTML = '';
     if(k<0) k = icons.length -1;
     if(k>icons.length-1) k = 0;
-    console.log('button clickd ', k);
     let i = k;
     var count = 7;
     while(count != 0){
@@ -131,7 +129,6 @@ sxthRight.addEventListener('click', function(){
 var nav  = document.querySelector('.dn-nav');
 
 function scr(){
-    console.log('function chala bhai', window.pageYOffset);
     if(window.pageYOffset == 0){
         nav.classList.remove('black');
         return;
@@ -150,4 +147,31 @@ var navBars = document.querySelector('.bars');
 var twoNav = document.querySelector('.nv-two');
 navBars.addEventListener('click', function(){
     twoNav.classList.toggle('op');
-})
+});
+
+
+// fifth section nav bar
+
+const ffthCon = document.querySelectorAll('.ffth-hvr-con');
+const ffthLeft = document.querySelector('.ffthleft');
+const ffthright = document.querySelector('.ffthright');
+
+var ffthConIndex = 0;
+
+ffthright.addEventListener('click', function(){
+    
+    for(let i = 0; i< ffthCon.length; i++){
+        ffthCon[i].classList.add('ffth-hid');
+    }
+    if(ffthConIndex > ffthCon.length) ffthConIndex = 0;
+    ffthCon[ffthConIndex++].classList.remove('ffth-hid');
+});
+ffthLeft.addEventListener('click', function(){
+    
+    for(let i = 0; i< ffthCon.length; i++){
+        ffthCon[i].classList.add('ffth-hid');
+    }
+    if(ffthConIndex < 0) ffthConIndex = ffthCon.length-1;
+    ffthCon[ffthConIndex--].classList.remove('ffth-hid');
+});
+
